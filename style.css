@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'righteous', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 24px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    padding: 20px;
+    height: 80px;
+}
+
+header .logo img {
+    width: 80px;
+    height: auto;
+    max-height: 100%;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+header nav ul li a:hover {
+    color: #f4f4f4;
+}
+
+section {
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    padding-bottom: 180px; /* Ajuste para garantir que a barra de informações de contato não sobreponha */
+}
+
+section.visible {
+    opacity: 1;
+}
+
+#apresentacao h1 {
+    font-size: 36px;
+    color: #000000;
+}
+
+#apresentacao h3 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#apresentacao p {
+    font-size: 18px;
+}
+
+#quem-sou-eu {
+    display: none;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 80%;
+    max-width: 900px;
+    height: 70vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+#quem-sou-eu.full-screen {
+    display: block;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+}
+
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.descricao p {
+    font-size: 18px;
+    max-width: 600px;
+}
+
+.objetivo {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-origin: center center;
+    padding: 20px;
+}
+
+.objetivo:hover {
+    transform: scale(1.01);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Modificação na classe .contato */
+.contato {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 16px;
+    z-index: 1000;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Sombra para dar destaque */
+    height: auto;  /* Garantir que a altura se ajuste conforme o conteúdo */
+}
+
+.contato p {
+    margin: 5px 0; /* Adiciona espaçamento entre os parágrafos */
+}
+
+/* Estilos para os links (e-mail, GitHub, LinkedIn) */
+.contato a {
+    color: #007bff;  /* Cor azul para parecer um link */
+    text-decoration: none; /* Remove o sublinhado por padrão */
+    font-weight: bold;  /* Deixa o link em negrito */
+}
+
+/* Efeito quando o mouse passa sobre o link */
+.contato a:hover {
+    color: #0056b3;  /* Cor mais escura para o efeito de hover */
+    text-decoration: underline;  /* Adiciona sublinhado quando passa o mouse */
+}
+
+/* Seção de Projetos */
+#projetos {
+    background-color: #f5f5f5;
+    padding: 20px;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+}
+
+.projeto {
+    margin-bottom: 20px;
+}
+
+.projeto h3 {
+    font-size: 26px;
+    color: #000;
+}
+
+.projeto p {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 26px !important;
+}
+
+p {
+    font-size: 20px !important;
+    line-height: 1.6;
+}
