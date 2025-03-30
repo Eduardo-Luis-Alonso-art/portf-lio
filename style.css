@@ -175,11 +175,11 @@ body.no-scroll {
     background-color: #f5f5f5;
     padding: 20px;
     position: absolute;
-    top: 20%; /* Ajustei a posição para não sobrepor */
+    top: 40%; /* Aumentei a distância para 40% da tela */
     left: 50%;
     transform: translateX(-50%);
     width: 80%;
-    padding-top: 120px; /* Garante que o conteúdo fique adequado */
+    padding-top: 120px;
 }
 
 .projeto {
@@ -253,16 +253,17 @@ body.no-scroll {
 
     #projetos {
         width: 90%;
-        top: 140px; /* Aumentando o afastamento da seção "Projetos" */
-        position: relative; /* Garantindo o controle correto de posição */
+        top: 150px !important; /* Distância ajustada da seção "Projetos" */
+        position: relative !important; /* Garantindo o controle correto de posição */
+        padding-top: 40px !important; /* Ajustando o padding */
     }
 
     #quem-sou-eu {
         width: 90% !important;
-        top: 140px !important; /* Aumentando o afastamento da seção "Quem Sou Eu" */
+        top: 140px !important; /* Afastamento maior da seção "Quem Sou Eu" */
         overflow-y: auto !important; /* Ativando rolagem vertical */
         max-height: 80vh !important; /* Limita a altura máxima da seção */
-        padding-right: 10px !important; /* Evitar que o conteúdo encoste na borda */
+        padding-right: 10px !important;
         display: block !important; /* Garantindo que a seção será visível */
     }
 
