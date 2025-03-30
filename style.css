@@ -253,15 +253,17 @@ body.no-scroll {
 
     #projetos {
         width: 90%;
-        top: 140px; /* Aumentando o afastamento da seção "Projetos" */
+        top: 140px !important; /* Aumentando o afastamento da seção "Projetos" */
+        position: relative !important; /* Garantindo o controle correto de posição */
     }
 
     #quem-sou-eu {
-        width: 90%;
-        top: 140px; /* Aumentando o afastamento da seção "Quem Sou Eu" */
-        overflow-y: auto; /* Ativando rolagem vertical */
-        max-height: 80vh; /* Limita a altura máxima da seção */
-        padding-right: 10px; /* Evitar que o conteúdo encoste na borda */
+        width: 90% !important;
+        top: 140px !important; /* Aumentando o afastamento da seção "Quem Sou Eu" */
+        overflow-y: auto !important; /* Ativando rolagem vertical */
+        max-height: 80vh !important; /* Limita a altura máxima da seção */
+        padding-right: 10px !important; /* Evitar que o conteúdo encoste na borda */
+        display: block !important; /* Garantindo que a seção será visível */
     }
 
     .projeto h3 {
