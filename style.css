@@ -39,17 +39,22 @@ header nav ul li a {
     text-decoration: none;
     color: #fff;
     font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    display: inline-block;
 }
 
 header nav ul li a:hover {
-    color: #f4f4f4;
+    transform: scale(1.1);
+    color: #fff;
 }
 
 section {
     padding: 20px;
     opacity: 0;
     transition: opacity 0.5s ease;
-    padding-bottom: 180px; /* Ajuste para garantir que a barra de informações de contato não sobreponha */
+    padding-bottom: 180px;
 }
 
 section.visible {
@@ -73,6 +78,10 @@ section.visible {
     font-size: 18px;
 }
 
+.port {
+    padding-bottom: 20px;
+}
+
 #quem-sou-eu {
     display: none;
     background-color: #fff;
@@ -80,18 +89,26 @@ section.visible {
     box-sizing: border-box;
     width: 80%;
     max-width: 900px;
-    height: 70vh;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    overflow-y: auto;
+    overflow: hidden; /* Impede rolagem durante a animação */
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.5s ease, height 0.5s ease; /* Animando altura e opacidade */
+    opacity: 0;
+    height: 0; /* Inicialmente a altura é zero */
 }
 
 #quem-sou-eu.full-screen {
     display: block;
+    opacity: 1;
+    height: auto; /* Ajusta a altura automaticamente ao conteúdo */
+}
+
+body.no-scroll {
+    overflow: hidden; /* Impede a rolagem da página inteira */
 }
 
 .perfil {
@@ -102,13 +119,14 @@ section.visible {
 .foto-perfil {
     width: 150px;
     height: 150px;
-    border-radius: 50%;
+    border-radius: 8px;
     margin-right: 20px;
 }
 
 .descricao p {
     font-size: 18px;
     max-width: 600px;
+    padding-top: 60px;
 }
 
 .objetivo {
@@ -125,7 +143,6 @@ section.visible {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Modificação na classe .contato */
 .contato {
     position: fixed;
     bottom: 0;
@@ -133,32 +150,26 @@ section.visible {
     width: 100%;
     background-color: #fff;
     color: #000;
+    padding: 10px;
     text-align: center;
-    padding: 15px 0;
-    font-size: 16px;
-    z-index: 1000;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Sombra para dar destaque */
-    height: auto;  /* Garantir que a altura se ajuste conforme o conteúdo */
+    box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.2);
 }
 
 .contato p {
-    margin: 5px 0; /* Adiciona espaçamento entre os parágrafos */
+    margin: 5px 0;
 }
 
-/* Estilos para os links (e-mail, GitHub, LinkedIn) */
 .contato a {
-    color: #007bff;  /* Cor azul para parecer um link */
-    text-decoration: none; /* Remove o sublinhado por padrão */
-    font-weight: bold;  /* Deixa o link em negrito */
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-/* Efeito quando o mouse passa sobre o link */
 .contato a:hover {
-    color: #0056b3;  /* Cor mais escura para o efeito de hover */
-    text-decoration: underline;  /* Adiciona sublinhado quando passa o mouse */
+    color: #0056b3;
+    text-decoration: underline;
 }
 
-/* Seção de Projetos */
 #projetos {
     background-color: #f5f5f5;
     padding: 20px;
@@ -182,11 +193,16 @@ section.visible {
     font-size: 20px;
 }
 
-h3 {
-    font-size: 26px !important;
+.projeto a {
+    text-decoration: none;
+    color: #0056b3;
+    font-weight: bold;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    padding: 5px 10px;
 }
 
-p {
-    font-size: 20px !important;
-    line-height: 1.6;
+.projeto a:hover {
+    transform: scale(1.1);
+    color: #007bff;
 }
