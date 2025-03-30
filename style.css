@@ -253,14 +253,15 @@ body.no-scroll {
 
     #projetos {
         width: 90%;
-        top: 120px; /* Ajustando a posição da seção Projetos */
+        top: 140px; /* Aumentando o afastamento da seção "Projetos" */
     }
 
     #quem-sou-eu {
         width: 90%;
-        top: 120px; /* Ajustando a posição da seção Quem Sou Eu */
-        overflow-y: auto; /* Adiciona rolagem vertical */
-        max-height: 80vh; /* Limita a altura máxima */
+        top: 140px; /* Aumentando o afastamento da seção "Quem Sou Eu" */
+        overflow-y: auto; /* Ativando rolagem vertical */
+        max-height: 80vh; /* Limita a altura máxima da seção */
+        padding-right: 10px; /* Evitar que o conteúdo encoste na borda */
     }
 
     .projeto h3 {
