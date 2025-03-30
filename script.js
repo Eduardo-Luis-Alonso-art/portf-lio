@@ -3,7 +3,6 @@ function mostrarQuemSouEu() {
     var quemSouEuSection = document.getElementById("quem-sou-eu");
     var projetosSection = document.getElementById("projetos");
 
-    // Adiciona a classe para bloquear a rolagem
     document.body.classList.add("no-scroll");
 
     apresentacaoSection.classList.remove("visible");
@@ -12,7 +11,6 @@ function mostrarQuemSouEu() {
     quemSouEuSection.style.display = "block";
     quemSouEuSection.classList.add("full-screen");
 
-    // Espera a seção ser exibida e então faz a transição suave no <p>
     setTimeout(function () {
         quemSouEuSection.classList.add("visible");
     }, 10);
@@ -23,7 +21,6 @@ function mostrarApresentacao() {
     var quemSouEuSection = document.getElementById("quem-sou-eu");
     var projetosSection = document.getElementById("projetos");
 
-    // Remove a classe para permitir a rolagem novamente
     document.body.classList.remove("no-scroll");
 
     quemSouEuSection.classList.remove("visible");
@@ -41,7 +38,6 @@ function mostrarProjetos() {
     var quemSouEuSection = document.getElementById("quem-sou-eu");
     var projetosSection = document.getElementById("projetos");
 
-    // Remove a classe para permitir a rolagem novamente
     document.body.classList.remove("no-scroll");
 
     apresentacaoSection.classList.remove("visible");

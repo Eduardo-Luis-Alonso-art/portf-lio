@@ -1,3 +1,4 @@
+/* Geral - para telas grandes */
 * {
     margin: 0;
     padding: 0;
@@ -93,22 +94,22 @@ section.visible {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    overflow: hidden; /* Impede rolagem durante a animação */
+    overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    transition: opacity 0.5s ease, height 0.5s ease; /* Animando altura e opacidade */
+    transition: opacity 0.5s ease, height 0.5s ease;
     opacity: 0;
-    height: 0; /* Inicialmente a altura é zero */
+    height: 0;
 }
 
 #quem-sou-eu.full-screen {
     display: block;
     opacity: 1;
-    height: auto; /* Ajusta a altura automaticamente ao conteúdo */
+    height: auto;
 }
 
 body.no-scroll {
-    overflow: hidden; /* Impede a rolagem da página inteira */
+    overflow: hidden;
 }
 
 .perfil {
@@ -205,4 +206,63 @@ body.no-scroll {
 .projeto a:hover {
     transform: scale(1.1);
     color: #007bff;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    body {
+        font-size: 18px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        height: auto;
+    }
+
+    header .logo img {
+        width: 60px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+
+    header nav ul li {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    #apresentacao h1 {
+        font-size: 28px;
+    }
+
+    .foto-perfil {
+        width: 120px;
+        height: 120px;
+    }
+
+    .descricao p {
+        max-width: 100%;
+        padding-top: 20px;
+    }
+
+    #projetos {
+        width: 90%;
+    }
+
+    .projeto h3 {
+        font-size: 20px;
+    }
+
+    .projeto p {
+        font-size: 16px;
+    }
+
+    .projeto a {
+        font-size: 16px;
+    }
 }
