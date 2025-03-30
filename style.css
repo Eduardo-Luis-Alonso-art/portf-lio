@@ -209,7 +209,7 @@ body.no-scroll {
     color: #007bff;
 }
 
-/* Responsividade */
+/* Responsividade - para telas menores que 600px */
 @media (max-width: 600px) {
     body {
         font-size: 18px;
@@ -253,7 +253,14 @@ body.no-scroll {
 
     #projetos {
         width: 90%;
-        padding-top: 140px; /* Ajuste no mobile para não sobrepor */
+        top: 120px; /* Ajustando a posição da seção Projetos */
+    }
+
+    #quem-sou-eu {
+        width: 90%;
+        top: 120px; /* Ajustando a posição da seção Quem Sou Eu */
+        overflow-y: auto; /* Adiciona rolagem vertical */
+        max-height: 80vh; /* Limita a altura máxima */
     }
 
     .projeto h3 {
