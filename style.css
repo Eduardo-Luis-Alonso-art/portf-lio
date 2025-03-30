@@ -253,8 +253,8 @@ body.no-scroll {
 
     #projetos {
         width: 90%;
-        top: 140px !important; /* Aumentando o afastamento da seção "Projetos" */
-        position: relative !important; /* Garantindo o controle correto de posição */
+        top: 140px; /* Aumentando o afastamento da seção "Projetos" */
+        position: relative; /* Garantindo o controle correto de posição */
     }
 
     #quem-sou-eu {
