@@ -1,12 +1,12 @@
 function mostrarQuemSouEu() {
     var apresentacaoSection = document.getElementById("apresentacao");
     var quemSouEuSection = document.getElementById("quem-sou-eu");
-    var projetosSection = document.getElementById("projetos");
+    var projetosLondrinenseTechSection = document.getElementById("projetos-londrinense-tech");
+    var projetosPensamentoComputacionalSection = document.getElementById("projetos-pensamento-computacional");
 
     document.body.classList.add("no-scroll");
 
-    apresentacaoSection.classList.remove("visible");
-    projetosSection.style.display = "none";
+    esconderSecoes([apresentacaoSection, projetosLondrinenseTechSection, projetosPensamentoComputacionalSection]);
 
     quemSouEuSection.style.display = "block";
     quemSouEuSection.classList.add("full-screen");
@@ -19,35 +19,56 @@ function mostrarQuemSouEu() {
 function mostrarApresentacao() {
     var apresentacaoSection = document.getElementById("apresentacao");
     var quemSouEuSection = document.getElementById("quem-sou-eu");
-    var projetosSection = document.getElementById("projetos");
+    var projetosLondrinenseTechSection = document.getElementById("projetos-londrinense-tech");
+    var projetosPensamentoComputacionalSection = document.getElementById("projetos-pensamento-computacional");
 
     document.body.classList.remove("no-scroll");
 
-    quemSouEuSection.classList.remove("visible");
-    quemSouEuSection.classList.remove("full-screen");
-    quemSouEuSection.style.display = "none";
-    projetosSection.style.display = "none";
+    esconderSecoes([quemSouEuSection, projetosLondrinenseTechSection, projetosPensamentoComputacionalSection]);
 
+    apresentacaoSection.style.display = "block";
     setTimeout(function () {
         apresentacaoSection.classList.add("visible");
     }, 10);
 }
 
-function mostrarProjetos() {
+function mostrarProjetosLondrinenseTech() {
     var apresentacaoSection = document.getElementById("apresentacao");
     var quemSouEuSection = document.getElementById("quem-sou-eu");
-    var projetosSection = document.getElementById("projetos");
+    var projetosLondrinenseTechSection = document.getElementById("projetos-londrinense-tech");
+    var projetosPensamentoComputacionalSection = document.getElementById("projetos-pensamento-computacional");
 
     document.body.classList.remove("no-scroll");
 
-    apresentacaoSection.classList.remove("visible");
-    quemSouEuSection.classList.remove("visible");
-    quemSouEuSection.style.display = "none";
+    esconderSecoes([apresentacaoSection, quemSouEuSection, projetosPensamentoComputacionalSection]);
 
-    projetosSection.style.display = "block";
+    projetosLondrinenseTechSection.style.display = "block";
     setTimeout(function () {
-        projetosSection.classList.add("visible");
+        projetosLondrinenseTechSection.classList.add("visible");
     }, 10);
+}
+
+function mostrarProjetosPensamentoComputacional() {
+    var apresentacaoSection = document.getElementById("apresentacao");
+    var quemSouEuSection = document.getElementById("quem-sou-eu");
+    var projetosLondrinenseTechSection = document.getElementById("projetos-londrinense-tech");
+    var projetosPensamentoComputacionalSection = document.getElementById("projetos-pensamento-computacional");
+
+    document.body.classList.remove("no-scroll");
+
+    esconderSecoes([apresentacaoSection, quemSouEuSection, projetosLondrinenseTechSection]);
+
+    projetosPensamentoComputacionalSection.style.display = "block";
+    setTimeout(function () {
+        projetosPensamentoComputacionalSection.classList.add("visible");
+    }, 10);
+}
+
+function esconderSecoes(secoes) {
+    for (var i = 0; i < secoes.length; i++) {
+        secoes[i].classList.remove("visible");
+        secoes[i].style.display = "none";
+    }
 }
 
 window.onload = function () {
